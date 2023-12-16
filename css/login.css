@@ -1,0 +1,171 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+    overflow: hidden;
+}
+
+section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    width: 100%;
+    background: white;
+    background-size: cover;
+}
+
+.signin-box{
+    position: relative;
+    width: 400px;
+    height: 450px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+h2{
+    text-align: center;
+    font-size: 2em;
+    color: black;
+}
+
+.input-box{
+    position: relative;
+    width: 310px;
+    margin: 30px 0;
+    border-bottom: 2px solid gainsboro;
+}
+
+.label-email{
+    position: absolute;
+    color: grey;
+    top: 50%;
+    left: 140px;
+    font-size: 1em;
+    transform: translateY(-50%); /* Menyesuaikan posisi vertikal pada label email */
+    pointer-events: none;
+    transition: .5s;
+}
+.label-password{
+    position: absolute;
+    color: grey;
+    top: 50%;
+    left: 120px;
+    font-size: 1em;
+    transform: translateY(-50%); /* Menyesuaikan posisi vertikal pada label password */
+    pointer-events: none;
+    transition: .5s;
+}
+
+.input-box input:focus~label,   /*untuk menggeser label ke atas sejauh 5px saat form diklik atau disi oleh user*/
+.input-box input:valid~label{   /*agar form menjadi lebih interaktif*/
+    top: -5px;  
+}
+
+.input-box input{
+    width:  100%;
+    height: 50px;
+    background: transparent;
+    outline: none; border: none;
+    color: gainsboro;
+    font-size: 1em;
+    padding: 0 35px 0 5 px;
+}
+
+.forgot-link{
+    text-align: center;
+    margin-left: 25px;
+    margin-bottom: 20px
+}
+
+.forgot-link a{
+    color: gray;
+    font-size: 1em; 
+    text-align: center;
+    margin: 25px 0 10px;
+    text-decoration: none;
+}
+
+.forgot-link a:hover{
+    text-decoration: underline;
+}
+.button-signin{
+    width: 100%;
+    height: 40px;
+    cursor: pointer; 
+    font-size: 1em;
+    font-weight: 500; 
+    border-radius: 40px;
+    border-color: grey;
+    background-color: orange;
+    color: white;
+}
+.facebook-box{
+    width: 100%;
+    height: 40px; 
+    background: white;
+    cursor: pointer; 
+    font-size: 1em;
+    font-weight: 500; 
+    border-radius: 40px;
+    margin-top: 20px;
+    border-color: gray;
+}
+
+.facebook-box span{
+    color: #1C0F71;
+    font-weight: 700;
+}
+
+.custom-box {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: calc(100% - 1000px); /* Mengatur lebar ukuran gambar dari form sign up */
+    height: 100vh; 
+}
+
+.custom-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: contrast(50%);
+    transition: filter 0.3s ease; /* Menambahkan transisi filter pada gambar */
+}
+.custom-box:hover img{
+    filter: contrast(80%);
+}
+
+.custom-box .title-box {
+    position: absolute;
+    top: 60px;
+    bottom: 20px;
+    right: 60px;
+    color: white;
+    font-size: 28px;
+}
+.custom-box .text-box {
+    position: absolute;
+    top: 100px;
+    bottom: 20px;
+    right: 10px;
+    left: 50px;
+    color: white;
+    font-size: 16px;
+}
+.custom-box .button-signup {
+    position: absolute;
+    bottom: 160px;
+    right: 20px;
+    left: 80px;
+    color: white;
+    font-size: 16px;
+    background: transparent;
+    border-radius: 50px;
+    border-color: white;
+    width: 150px;
+    height: 36px;
+    cursor: pointer;
+}
